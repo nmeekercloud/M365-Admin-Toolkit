@@ -1,0 +1,10 @@
+{
+  "SourceCommit": "651524aa2e5931accc11ca6d56bca2f8e802fbbe",
+  "ExportKind": "Reviewed file snapshot; no private Git history",
+  "ExcludedSourceFiles": [
+    "Documentation/Testing/Reports-Functional-Signoff-2026-10-24.md",
+    "Tests/Offboarding7C/Baseline.json",
+    "Tests/Offboarding7C/Test-Offboarding7C.ps1"
+  ],
+  "Validation": "21 targeted toolkit tests passed; full suite and lint not run. Inventory and selected-file review only. Not production readiness."
+}

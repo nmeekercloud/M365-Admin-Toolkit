@@ -1,0 +1,15 @@
+# Hub Associated Sites Report
+
+New read-only SharePoint task, order 80: normally option 8 after the existing seven tasks. The dynamic catalog discovers the new .task.psd1; no menu, authentication or tenant policy files are overwritten. PermissionReview remains Unreviewed; offline tests are not a permission review.
+
+Select a registered hub by number or provide its full URL. The report validates the toolkit tenant/global-cloud root and tenant-admin connection, queries Get-PnPHubSite and Get-PnPHubSiteChild with explicit connection/identity, and optionally enriches each returned URL with tenant-site metadata. PnP tenant-administration access is required. No permissions, associations, hub navigation, modules, app registrations or tenant settings are changed.
+
+Results: hub summary displayed separately, associated sites paged on screen, CSV offered afterward. Default No; user chooses full filename/location through the existing Phase-1 export control. Explicit ExportPath is save intent; NoInteractive without ExportPath saves nothing. OverwriteExport is required for automated overwrite. Persistent logging follows the prior independent session opt-in.
+
+CSV includes a HubSummary record plus AssociatedSite and any UnresolvedAssociation records in a consistent schema. Thus even a genuinely empty hub has exportable summary evidence. ReportedSiteCount counts distinct URLs returned by the hub query, not guarantees about permissions or a transactional inventory. Site metadata can confirm hub ID or mark ChangedOrMismatched. Detail lookup failures preserve URLs; unknown returns are diagnostics; incomplete enumeration is never labeled complete zero results. Cross-host returned URLs are preserved but not queried for metadata. Only direct associations returned by this hub command are covered, not navigation links or recursive hub-to-hub traversal. Selected hub must be on the verified root host. Hub-self/duplicate entries are removed and counted.
+
+PassThru returns Metadata, Sites, Diagnostics, ExportRows, ExportStatus, ExportPath, ExportError. No automatic local report files, sidecar JSON or output folders. Get-PnPHubSite/Child exceptions are retained as incomplete enumeration where possible. Process termination cannot preserve unsaved memory.
+
+Installer validates main dependency blob hashes, refuses existing new targets/duplicate task IDs, parses payload PowerShell before writing, and writes new files with CreateNew. No source originals are overwritten; baseline dependency copies are backed up outside the repo and new writes are removed if installation fails. Includes 18 offline Pester tests with mocked cloud commands, catalog discovery and display/export behavior. No modules installed/updated. PowerShell/Pester, full suite and live hub queries NOT run during generation (PowerShell unavailable). Installer runs the new tests when Pester 5 exists. Restart/refresh menu afterward. This addition does not finish the broader output-standardization migration.
+
+PnP documentation: https://pnp.github.io/powershell/cmdlets/Get-PnPHubSite.html and https://pnp.github.io/powershell/cmdlets/Get-PnPHubSiteChild.html

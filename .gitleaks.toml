@@ -1,0 +1,12 @@
+title = "M365 Admin Toolkit secret scanning"
+[extend]
+useDefault = true
+
+[[rules]]
+id = "jwt"
+[[rules.allowlists]]
+description = "Exact synthetic JWT used only by the offline log-redaction test"
+condition = "AND"
+regexTarget = "secret"
+paths = ['''(?:^|[/\\])Tests[/\\]M365Toolkit\.Core\.Tests\.ps1$''']
+regexes = ['''^eyJhbGciOiJIUzI1NiJ9\.eyJzdWIiOiIxMjM0NTY3ODkwIn0\.dozjgNryP4J3jVmNHl0w5N_XgL0n3I9PlFUP0THsR8U$''']

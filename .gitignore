@@ -1,0 +1,71 @@
+# Local settings and runtime output
+Config/*.local.psd1
+Logs/
+Reports/
+!Scripts/Reports/
+Scripts/Reports/*
+!Scripts/Reports/Category.psd1
+!Scripts/Reports/*.task.psd1
+!Scripts/Reports/*.ps1
+Exports/
+Backups/
+Output/
+*.log
+*.transcript.txt
+
+# Customer data; retain only supported sample CSVs
+*.csv
+*.xlsx
+*.xls
+!Templates/CSV/*.csv
+
+# Certificates, keys and secrets
+*.pfx
+*.p12
+*.cer
+*.crt
+*.pem
+*.key
+*.secret
+*.clixml
+.env
+.env.*
+
+# Test results
+TestResults/
+testResults.xml
+coverage.xml
+
+# Editors and operating systems
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.code-workspace
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Local patch backups, including old tracked-backup locations
+.local-backups/
+/PatchBackups/
+*.backup-*
+*.bak
+
+# Local Gitleaks downloads and generated scan artifacts, NOT scanner config
+/.gitleaks/
+/.gitleaks-cache/
+/gitleaks/
+/gitleaks_[0-9]*/
+/gitleaks-[0-9]*/
+/gitleaks.exe
+/gitleaks_[0-9]*.zip
+/gitleaks-[0-9]*.zip
+/gitleaks_[0-9]*.tar.gz
+/gitleaks-[0-9]*.tar.gz
+gitleaks-report*.json
+gitleaks-report*.sarif
+gitleaks-report*.csv
+gitleaks-report*.html
+gitleaks-results*.json
+gitleaks-results*.sarif

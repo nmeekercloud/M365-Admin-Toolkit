@@ -1,0 +1,4 @@
+Action,UserPrincipalName,DisplayName,Department,JobTitle,OfficeLocation
+Update,test.user@YOUR-VERIFIED-DOMAIN,Test User,Testing,Test Account,Lab
+Disable,test.offboard@YOUR-VERIFIED-DOMAIN,,,,
+Enable,test.enable@YOUR-VERIFIED-DOMAIN,,,,

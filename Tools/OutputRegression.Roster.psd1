@@ -1,0 +1,25 @@
+@{
+ Suites=@(
+  @{Name='OutputStandardization.Phase1.Tests.ps1';Expected=24},
+  @{Name='SharePoint.OutputPhase2.Tests.ps1';Expected=18},
+  @{Name='SharePoint.OutputPhase3.Tests.ps1';Expected=14},
+  @{Name='SharePoint.OutputPhase4.Tests.ps1';Expected=9},
+  @{Name='SharePoint.OutputPhase5.Tests.ps1';Expected=10},
+  @{Name='SharePoint.OutputPhase6.Tests.ps1';Expected=10},
+  @{Name='Reports.OutputPhase7.Tests.ps1';Expected=10},
+  @{Name='Reports.OutputPhase8.Tests.ps1';Expected=12},
+  @{Name='Reports.OutputPhase9.Tests.ps1';Expected=12},
+  @{Name='Groups.OutputPhase10.Tests.ps1';Expected=12},
+  @{Name='Groups.OutputPhase11.Tests.ps1';Expected=10},
+  @{Name='Groups.OutputPhase12.Tests.ps1';Expected=10},
+  @{Name='Groups.OutputPhase13.Tests.ps1';Expected=10},
+  @{Name='Groups.OutputPhase14.Tests.ps1';Expected=10},
+  @{Name='Groups.OutputPhase10.Validation.Tests.ps1';Expected=5},
+  @{Name='Exchange.OutputPhase15.Tests.ps1';Expected=12},
+  @{Name='Exchange.OutputPhase16.Tests.ps1';Expected=12},
+  @{Name='Exchange.OutputPhase17.Tests.ps1';Expected=14},
+  @{Name='OneDrive.OutputPhase18.Tests.ps1';Expected=16},
+  @{Name='UsersTenant.OutputPhase19.Tests.ps1';Expected=16},
+  @{Name='OutputAudit.Tests.ps1';Expected=10}
+ )
+}
